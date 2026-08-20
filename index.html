@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Loan Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="calc-card">
+            <!-- Left: form -->
+            <div class="calc-left">
+                <div class="top-bar"></div>
+
+                <div class="title-row">
+                    <h1>Want to understand the cost of your loan?</h1>
+                    <span class="info-icon" title="This calculator is a guide only and does not constitute a formal loan offer.">i</span>
+                </div>
+
+                <p class="subtitle">Use our business loan calculator below to find out how much you can borrow to take your business to the next level.</p>
+
+                <div class="field">
+                    <label for="loanAmount">Loan amount</label>
+                    <div class="input-wrap">
+                        <span class="prefix">£</span>
+                        <input type="text" id="loanAmount" inputmode="numeric" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="interestRate">Annual interest rate</label>
+                    <div class="input-wrap">
+                        <span class="prefix">%</span>
+                        <input type="text" id="interestRate" inputmode="decimal" autocomplete="off">
+                    </div>
+                    <p class="hint">Interest rates vary depending on the lender. Use 10% if you're unsure</p>
+                </div>
+
+                <div class="field">
+                    <label>Loan duration</label>
+                    <div class="duration-grid">
+                        <button type="button" class="duration-btn" data-months="12">12<br><span>months</span></button>
+                        <button type="button" class="duration-btn" data-months="24">24<br><span>months</span></button>
+                        <button type="button" class="duration-btn" data-months="36">36<br><span>months</span></button>
+                        <button type="button" class="duration-btn" data-months="48">48<br><span>months</span></button>
+                        <button type="button" class="duration-btn" data-months="60">60<br><span>months</span></button>
+                        <button type="button" class="duration-btn" data-months="72">72<br><span>months</span></button>
+                    </div>
+                </div>
+
+                <button type="button" class="calc-btn" id="calcBtn" disabled>Calculate</button>
+
+                <p class="disclaimer">Calculations are indicative only and intended as a guide only. The figures calculated are not a statement of the actual repayments that will be charged on any actual loan and do not constitute a loan offer.</p>
+            </div>
+
+            <!-- Right: estimate -->
+            <div class="calc-right">
+                <h2>Your estimate</h2>
+
+                <div class="estimate-list">
+                    <div class="estimate-row">
+                        <span class="est-label">Monthly payments</span>
+                        <span class="est-value" id="monthlyPayment">-</span>
+                    </div>
+                    <div class="estimate-row">
+                        <span class="est-label">Monthly interest</span>
+                        <span class="est-value" id="monthlyInterest">-</span>
+                    </div>
+                    <div class="estimate-row">
+                        <span class="est-label">Total interest</span>
+                        <span class="est-value" id="totalInterest">-</span>
+                    </div>
+                    <div class="estimate-row">
+                        <span class="est-label">Length of loan</span>
+                        <span class="est-value" id="loanLength">-</span>
+                    </div>
+                </div>
+
+                <div class="estimate-total">
+                    <span class="total-label">Total cost of loan</span>
+                    <span class="total-value" id="totalCost">-</span>
+                </div>
+
+                <button type="button" class="quote-btn" id="quoteBtn" disabled>Get a quote</button>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h3>Important notes</h3>
+            <p>This calculator is provided as a guide only and does not constitute a formal loan offer. Actual repayments and fees may vary depending on the loan product, approval process, agreed terms and the date repayments start.</p>
+            <ul>
+                <li><strong>AIR</strong> means the annual interest rate used to calculate the monthly repayment.</li>
+                <li><strong>APR</strong> is calculated from the customer cash flows and includes the effect of any compulsory fees entered.</li>
+                <li>Guide rates: <strong>10%</strong> business loans, <strong>6.5%</strong> Asset Finance, <strong>16%</strong> Revolving credit.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
